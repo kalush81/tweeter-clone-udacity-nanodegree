@@ -63,7 +63,7 @@ let tweets = {
     replies: ["njv20mq7jsxa6bgsqc97"],
     replyingTo: null,
   },
-  f4xzgapq7mu783k9t02ghx: {
+  "f4xzgapq7mu783k9t02ghx": {
     id: "f4xzgapq7mu783k9t02ghx",
     text:
       "Want to work at Facebook/Google/:BigCompany? Start contributing code long before you ever interview there.",
@@ -73,7 +73,7 @@ let tweets = {
     replies: [],
     replyingTo: null,
   },
-  hbsc73kzqi75rg7v1e0i6a: {
+  "hbsc73kzqi75rg7v1e0i6a": {
     id: "hbsc73kzqi75rg7v1e0i6a",
     text: "Puppies 101: buy a hamper with a lid on it.",
     author: "sarah_edo",
@@ -92,7 +92,7 @@ let tweets = {
     replies: [],
     replyingTo: null,
   },
-  czpa59mg577x1oo45cup0d: {
+  "czpa59mg577x1oo45cup0d": {
     id: "czpa59mg577x1oo45cup0d",
     text:
       "React came out 'rethinking best practices'. It has since accumulated 'best practices' of its own. Let’s see if we can do better.",
@@ -112,7 +112,7 @@ let tweets = {
     replies: ["26p5pskqi88i58qmza2gid"],
     replyingTo: null,
   },
-  nnvkjqoevs8t02lzcc0ky: {
+  "nnvkjqoevs8t02lzcc0ky": {
     id: "nnvkjqoevs8t02lzcc0ky",
     text:
       "Maybe the real benefit of open source was the friendships we made along the way?",
@@ -122,7 +122,7 @@ let tweets = {
     replies: [],
     replyingTo: null,
   },
-  omdbjl68fxact38hk7ypy6: {
+  "omdbjl68fxact38hk7ypy6": {
     id: "omdbjl68fxact38hk7ypy6",
     text:
       "A 7-minute Paul Joseph Watson video being translated and aired by a Russian state TV channel is the most surreal thing I’ve seen in 2018 yet",
@@ -152,7 +152,7 @@ let tweets = {
     replies: ["xi3ca2jcfvpa0i3t4m7ag", "r0xu2v1qrxa6ygtvf2rkjw"],
     replyingTo: null,
   },
-  fap8sdxppna8oabnxljzcv: {
+  "fap8sdxppna8oabnxljzcv": {
     id: "fap8sdxppna8oabnxljzcv",
     author: "tylermcginnis",
     text:
@@ -171,7 +171,7 @@ let tweets = {
     replyingTo: "8xf0y6ziyjabvozdd253nd",
     replies: [],
   },
-  njv20mq7jsxa6bgsqc97: {
+  "njv20mq7jsxa6bgsqc97": {
     id: "njv20mq7jsxa6bgsqc97",
     author: "dan_abramov",
     text: "Sometimes you have to sacrifice simplicity for power.",
@@ -180,7 +180,7 @@ let tweets = {
     replyingTo: "5c9qojr2d1738zlx09afby",
     replies: [],
   },
-  leqp4lzfox7cqvsgdj0e7: {
+  "leqp4lzfox7cqvsgdj0e7": {
     id: "leqp4lzfox7cqvsgdj0e7",
     author: "tylermcginnis",
     text: "Also trashcans. Learned this the hard way.",
@@ -189,7 +189,7 @@ let tweets = {
     replyingTo: "hbsc73kzqi75rg7v1e0i6a",
     replies: [],
   },
-  sfljgka8pfddbcer8nuxv: {
+  "sfljgka8pfddbcer8nuxv": {
     id: "sfljgka8pfddbcer8nuxv",
     author: "dan_abramov",
     text: "Puppies are the best.",
@@ -217,7 +217,7 @@ let tweets = {
     replyingTo: "2mb6re13q842wu8n106bhk",
     replies: [],
   },
-  xi3ca2jcfvpa0i3t4m7ag: {
+  "xi3ca2jcfvpa0i3t4m7ag": {
     id: "xi3ca2jcfvpa0i3t4m7ag",
     author: "tylermcginnis",
     text: "Just DMd you!",
@@ -226,7 +226,7 @@ let tweets = {
     replyingTo: "6h5ims9iks66d4m7kqizmv",
     replies: [],
   },
-  r0xu2v1qrxa6ygtvf2rkjw: {
+  "r0xu2v1qrxa6ygtvf2rkjw": {
     id: "r0xu2v1qrxa6ygtvf2rkjw",
     author: "dan_abramov",
     text: "This is a great idea.",

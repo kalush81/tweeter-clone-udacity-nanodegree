@@ -10,6 +10,9 @@ const dispatch = useDispatch();
 useEffect(() => {
   dispatch(handleInitialData())
 })
+useEffect(() => {
+  dispatch(handleInitialData())
+})
   
 
 return <div className="App">
