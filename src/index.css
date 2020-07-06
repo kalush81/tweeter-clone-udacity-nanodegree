@@ -11,7 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.dashboard-list {
+  /* border: 1px solid black; */
+}
 
-.App {
+.center {
   text-align: center;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  margin: 10px;
 }
