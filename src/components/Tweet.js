@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { formatTweet } from "../utils/helpers";
+import { formatTweet, formatDate } from "../utils/helpers";
 import {
   TiArrowBackOutline,
   TiHeartFullOutline,
@@ -16,15 +16,56 @@ export default function Tweet({ tweetId }) {
     };
   });
 
-  console.log("full tweet", tweet);
+  const {
+    name,
+    avatar,
+    timestamp,
+    text,
+    hasLiked,
+    likes,
+    replies,
+    id,
+    parent,
+  } = tweet.tweet;
 
+  const toParent = (e, id) => {
+    e.preventDefault();
+    //redirect to a parent tweet
+  };
+  const handleLike = () => {};
   return (
-    <div>
-      <h2>{tweet.tweet.name}</h2>
-      <p>{tweet.tweet.text}</p>
-      <TiArrowBackOutline/>
-      <TiHeartOutline />
-      <TiHeartFullOutline />
+    <div className="tweet">
+      <img src={avatar} alt={`avatar of ${name}`} className="avatar"></img>
+      <div className="tweet-info">
+        <span>{name}</span>
+        <span>{formatDate(timestamp)}</span>
+        {parent ? (
+          <button
+            onClick={(e) => toParent(e, parent.id)}
+            className="replying-to"
+          >
+            Replying to @{parent.author}
+          </button>
+        ) : (
+          ""
+        )}
+        <p>{text}</p>
+        <div className="tweet-icons">
+          <TiArrowBackOutline className="tweet-icon" />
+          <span>{replies !== 0 && replies}</span>
+          <button className="heart-button" onClick={handleLike}>
+            {hasLiked === true ? (
+              <TiHeartFullOutline color="#e0245e" className="tweet-icon" />
+            ) : (
+              <TiHeartOutline className="tweet-icon" />
+            )}
+          </button>
+          <span>{likes !== 0 && likes}</span>
+
+          {/* <TiHeartOutline />
+          <TiHeartFullOutline /> */}
+        </div>
+      </div>
     </div>
   );
 }
