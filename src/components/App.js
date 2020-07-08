@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { handleInitialData } from "../actions/shared";
 import TweetsDashboard from "./TweetsDashboard";
+import LoadingBar from 'react-redux-loading';
 
 function App() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div>
+      <LoadingBar />
       {authedUser ? (
         <TweetsDashboard user={authedUser} />
       ) : (

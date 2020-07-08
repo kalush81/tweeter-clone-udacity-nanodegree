@@ -1,11 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { formatTweet, formatDate } from "../utils/helpers";
 import {
   TiArrowBackOutline,
   TiHeartFullOutline,
   TiHeartOutline,
 } from "react-icons/ti";
+import { handleToggleTweet }from '../actions/tweets'; 
 
 export default function Tweet({ tweetId }) {
   const tweet = useSelector(({ tweets, users, authedUser }) => {
@@ -13,6 +14,7 @@ export default function Tweet({ tweetId }) {
     const parrent = tweet.replyingTo ? tweets[tweet.replyingTo] : null;
     return {
       tweet: formatTweet(tweet, users[tweet.author], authedUser, parrent),
+      authedUser
     };
   });
 
@@ -32,7 +34,18 @@ export default function Tweet({ tweetId }) {
     e.preventDefault();
     //redirect to a parent tweet
   };
-  const handleLike = () => {};
+  const dispatch = useDispatch()
+  const handleLike = () => {
+    //
+    console.log('toggle like button works', hasLiked )
+    const obj = {
+      id,
+      hasLiked,
+      authedUser: tweet.authedUser
+    }
+    dispatch(handleToggleTweet(obj))
+  };
+
   return (
     <div className="tweet">
       <img src={avatar} alt={`avatar of ${name}`} className="avatar"></img>

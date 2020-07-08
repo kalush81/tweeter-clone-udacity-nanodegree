@@ -4,6 +4,8 @@ import tweets from './tweets';
 import authedUser from './authedUser';
 import {loadingBarReducer} from 'react-redux-loading';
 
+console.log(loadingBarReducer())
+
 export default combineReducers({
     users,
     tweets,
