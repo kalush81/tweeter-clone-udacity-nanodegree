@@ -5,7 +5,21 @@ export default function tweets(state = {}, action) {
     case RECEIVE_TWEETS:
       return { ...state, ...action.tweets };
     case ADD_NEW_TWEET:
-      return Object.assign(state, action.state);
+        const {tweet} = action
+        let replyingTo = {}
+        if(tweet.replyingTo !== null) {
+            replyingTo = {
+                [tweet.replyingTo] : {
+                    ...state[tweet.replyingTo],
+                    replies: state[tweet.replyingTo].replies.concat([tweet.id])
+                }
+            }
+        }
+      return {
+          ...state,
+          [tweet.id]: tweet,
+          ...replyingTo
+      };
     case TOGGLE_TWEET:
         console.log('action', action.tweet.id)
         const {id, authedUser, hasLiked} = action.tweet
