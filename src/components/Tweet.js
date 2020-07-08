@@ -6,7 +6,7 @@ import {
   TiHeartFullOutline,
   TiHeartOutline,
 } from "react-icons/ti";
-import { handleToggleTweet }from '../actions/tweets'; 
+import { handleToggleTweet } from "../actions/tweets";
 
 export default function Tweet({ tweetId }) {
   const tweet = useSelector(({ tweets, users, authedUser }) => {
@@ -14,7 +14,7 @@ export default function Tweet({ tweetId }) {
     const parrent = tweet.replyingTo ? tweets[tweet.replyingTo] : null;
     return {
       tweet: formatTweet(tweet, users[tweet.author], authedUser, parrent),
-      authedUser
+      authedUser,
     };
   });
 
@@ -34,16 +34,15 @@ export default function Tweet({ tweetId }) {
     e.preventDefault();
     //redirect to a parent tweet
   };
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  
   const handleLike = () => {
-    //
-    console.log('toggle like button works', hasLiked )
-    const obj = {
+    const info = {
       id,
       hasLiked,
-      authedUser: tweet.authedUser
-    }
-    dispatch(handleToggleTweet(obj))
+      authedUser: tweet.authedUser,
+    };
+    dispatch(handleToggleTweet(info));
   };
 
   return (

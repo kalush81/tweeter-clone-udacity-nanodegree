@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { handleInitialData } from "../actions/shared";
 import TweetsDashboard from "./TweetsDashboard";
 import LoadingBar from 'react-redux-loading';
+import Newtweet from './NewTweet';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <LoadingBar />
+      <Newtweet />
       {authedUser ? (
         <TweetsDashboard user={authedUser} />
       ) : (
