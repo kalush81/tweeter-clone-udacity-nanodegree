@@ -15,8 +15,28 @@ code {
   /* border: 1px solid black; */
 }
 
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
 .center {
   text-align: center;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
 }
 
 ul {
@@ -29,6 +49,7 @@ li {
   text-decoration: none;
   margin: 10px;
 }
+
 .avatar {
   height: 50px;
   border-radius: 25px;

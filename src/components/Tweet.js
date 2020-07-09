@@ -7,6 +7,7 @@ import {
   TiHeartOutline,
 } from "react-icons/ti";
 import { handleToggleTweet } from "../actions/tweets";
+import { Link } from 'react-router-dom';
 
 export default function Tweet({ tweetId }) {
   const tweet = useSelector(({ tweets, users, authedUser }) => {
@@ -35,7 +36,7 @@ export default function Tweet({ tweetId }) {
     //redirect to a parent tweet
   };
   const dispatch = useDispatch();
-  
+
   const handleLike = () => {
     const info = {
       id,
@@ -46,7 +47,7 @@ export default function Tweet({ tweetId }) {
   };
 
   return (
-    <div className="tweet">
+    <Link to={`/tweet/${tweetId}`} className="tweet">
       <img src={avatar} alt={`avatar of ${name}`} className="avatar"></img>
       <div className="tweet-info">
         <span>{name}</span>
@@ -73,11 +74,8 @@ export default function Tweet({ tweetId }) {
             )}
           </button>
           <span>{likes !== 0 && likes}</span>
-
-          {/* <TiHeartOutline />
-          <TiHeartFullOutline /> */}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { handleAddTweet } from '../actions/tweets'
 
-export default function NewTweet() {
+export default function NewTweet(props) {
     
     const [text, setText] = useState('')
 
@@ -11,7 +11,7 @@ export default function NewTweet() {
     const handleSubmit = (e) => {
         e.preventDefault();
         //add to redux and db
-        dispatch(handleAddTweet(text))
+        dispatch(handleAddTweet(text, props.id))
         setText('')
     }
     const handleChangeText = (e) => {
