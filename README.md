@@ -2,5 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## This project is a part of Udacity's Nanodegree React - Redux course
 
+Originally created usin class based component. Rewritten using React hooks.
+
 
 
