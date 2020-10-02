@@ -43,6 +43,7 @@ export default function Tweet({ tweetId }) {
       hasLiked,
       authedUser: tweet.authedUser,
     };
+    console.log('info, let\'s see what does info contain', info)
     dispatch(handleToggleTweet(info));
   };
 
